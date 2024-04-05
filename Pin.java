@@ -1,19 +1,22 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Pin {
     
+    public static HashMap<Integer,User> userData=User.data;
     public static Scanner dk=new Scanner(System.in);
     
     public static void Pinchange(){
+        User user=userData.get(login.username);
         System.out.println("Enter the Current Pin");
-        short oldPin=dk.nextShort();
-        if (oldPin == main.pin){
+        int oldPin=dk.nextShort();
+        if (oldPin ==user.getPassword() ){
             System.out.println("Enter the new Pin");
-            short newPin=dk.nextShort();
+            int newPin=dk.nextShort();
             System.out.println("Renter the new Pin");
-            short newPina=dk.nextShort();
+            int newPina=dk.nextShort();
             if(newPin==newPina){
-                main.pin=newPin;
+                user.pinchange(newPin);
                 System.out.println("Pin Changed Successfully");
                 continueTrans.Continue();
             }

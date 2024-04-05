@@ -1,6 +1,8 @@
+import java.util.HashMap;
+
 public class Balance {
-    // Declare bal as a class variable
-    public static long bal = 2000;
+    
+    public static HashMap<Integer,User> userData=User.data;
 
     public static void main(String[] args) {
         // Call BalanceCheck method
@@ -9,10 +11,9 @@ public class Balance {
 
     // Change return type to void
     public static void BalanceCheck() {
-        bal=bal+ Deposit.Amnt;
-        System.out.println(bal);
-
-        continueTrans.Continue();
+       User user=userData.get(login.username);
+       System.out.println(user.getBalance());
+       continueTrans.Continue();
         
     }
 }
