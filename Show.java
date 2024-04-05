@@ -35,7 +35,6 @@ public class Show {
                     break;
                 case 6:
                     System.out.println("Exiting.....! Thank You");
-                    login.userlogin();
                     break;
                 default:
                     System.out.println("Service selected is Unavailable");
