@@ -24,6 +24,10 @@ public class AdminDts{
         this.name=name;
     }
 
+    public int getadminId(){
+        return adminId;
+    }
+
     public int getPass(){
         return adminpass;
     }
