@@ -12,7 +12,7 @@ class Accounts{
             User user=userData.get(i);
             System.out.println(user.getName() +" "+ i);
         }
-        continueTrans.Continue();
+        continueTrans.ContinueAd();
 
     }
 }

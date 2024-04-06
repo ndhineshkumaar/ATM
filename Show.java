@@ -5,6 +5,7 @@ public class Show {
 
     static Scanner dk=new Scanner(System.in);
     public static HashMap<Integer,User> userData =User.data;
+    public static HashMap<Integer,AdminDts> adminData =AdminDts.Data;
 
     public static void Display(){
         User user=userData.get(login.username);
@@ -41,5 +42,31 @@ public class Show {
                     Display();
                     break;
     }
+
+    
 }
+    public static void adminService(){
+        AdminDts dts= adminData.get(Admin.adminId);
+        System.out.println("Welcome" +" "+ dts.getName());
+        System.out.println("Select the services");
+            System.out.println("1. Add User Account");
+            System.out.println("2. Show User Account");
+            System.out.println("3. Delete User Account");
+            System.out.println("4. Exit");
+            int ch=dk.nextInt();
+            switch(ch){
+                case 1:
+                    NewUser.Createacc();
+                    break;
+                case 2:
+                    Accounts.showacc();
+                    break;
+                case 3:
+                    DeleteUser.userDelete();
+                    break;
+                default:
+                    System.out.println("Incorrect Selection");
+                    break;
+        }
+    }
 }

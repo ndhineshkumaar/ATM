@@ -53,4 +53,8 @@ public class User {
         password=pin;
     }
 
+    public void delete(int username){
+        data.remove(username);
+    }
+
 }

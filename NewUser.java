@@ -17,8 +17,7 @@ public class NewUser {
         
         User.addUser(username, pass, name, bal);
         System.out.println("User Added Successfully");
-        System.out.println("Login and Continue the Services");
-        login.userlogin();
+        continueTrans.ContinueAd();
 
     }
     

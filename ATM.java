@@ -6,25 +6,22 @@ public class ATM {
 
     public static void main(){
         User.userdata();
+        AdminDts.admindata();
         System.out.println("Welcome to SBI ATM");
-        System.out.println("1. Login");
-        System.out.println("2. Create Account");
-        System.out.println("3. Show Account");
-        System.out.println("4. Exit");
+        System.out.println("1. Admin Login");
+        System.out.println("2. User Login");
+        System.out.println("3. Exit");
         int choice = dk.nextInt();
         switch (choice) {
             case 1:
-                login.userlogin();
+                Admin.login();
                 break;
             case 2:
-                NewUser.Createacc();;
+                login.userlogin();
                 break;
             case 3:
-                Accounts.showacc();
-                break;
-            case 4:
                 System.out.println("Exiting...! Thank you");
-                return;
+                return;                
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
