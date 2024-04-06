@@ -65,7 +65,7 @@ public class Show {
                     DeleteUser.userDelete();
                     break;
                 default:
-                    System.out.println("Incorrect Selection");
+                    System.out.println("Exiting....! Thank You");
                     break;
         }
     }
